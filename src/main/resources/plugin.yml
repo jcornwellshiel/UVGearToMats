@@ -1,0 +1,7 @@
+name: UVGemCleanup
+main: net.uvnode.uvgemcleanup.UVGemCleanup
+version: 1.0.0-dev
+load: POSTWORLD
+author: jcornwellshiel
+website: uv-node.net
+softdepend: [pluginmetrics]
