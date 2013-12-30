@@ -70,7 +70,7 @@ public final class UVGearToMats extends JavaPlugin implements Listener {
     private void onFurnaceSmeltEvent(FurnaceSmeltEvent event) {
         if (_items.containsKey(event.getSource().getType().toString())) {
             ItemStack newOutput = _items.get(event.getSource().getType().toString()).clone();
-            Integer newAmount = (Integer)(_randomizer.nextInt(newOutput.getAmount())*event.getSource().getDurability());
+            Integer newAmount = (Integer)(_randomizer.nextInt(newOutput.getAmount()) * event.getSource().getDurability() / event.getSource().getType().getMaxDurability());
             newOutput.setAmount(newAmount);
             if (newOutput.getAmount() <= 0)
                 newOutput.setAmount(1);
