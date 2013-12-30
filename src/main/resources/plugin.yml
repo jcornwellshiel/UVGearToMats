@@ -1,5 +1,5 @@
-name: UVGemCleanup
-main: net.uvnode.uvgemcleanup.UVGemCleanup
+name: UVGearToMats
+main: net.uvnode.uvgeartomats.UVGearToMats
 version: 1.0.0-dev
 load: POSTWORLD
 author: jcornwellshiel
