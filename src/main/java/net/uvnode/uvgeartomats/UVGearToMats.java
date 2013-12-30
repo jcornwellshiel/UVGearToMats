@@ -60,6 +60,8 @@ public final class UVGearToMats extends JavaPlugin implements Listener {
         if (_items.containsKey(event.getSource().getType().toString())) {
             ItemStack newOutput = _items.get(event.getSource().getType().toString()).clone();
             newOutput.setAmount((Integer)(_randomizer.nextInt(newOutput.getAmount())*event.getSource().getDurability()));
+            if (newOutput.getAmount() <= 0)
+                newOutput.setAmount(1);
             event.setResult(newOutput);
         }
     }
